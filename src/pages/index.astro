@@ -12,39 +12,483 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body>
 		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
+
+		<!-- HERO -->
+		<section class="hero">
+			<div class="hero-inner">
+				<div class="hero-text">
+					<h1>Pere Soler</h1>
+					<p class="subtitle">Backend .NET Developer</p>
+					<p class="tagline">Specialized in API Development, Cloud Automation &amp; Data Security</p>
+					<div class="hero-meta">
+						<span>
+							<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+							Catalonia, Spain
+						</span>
+						<a href="mailto:peree.sooler@gmail.com">
+							<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+							peree.sooler@gmail.com
+						</a>
+						<a href="tel:+34608760927">
+							<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+							+34 608 760 927
+						</a>
+						<a href="https://linkedin.com/in/peresolerrigau" target="_blank" rel="noopener">
+							<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+							LinkedIn
+						</a>
+					</div>
+					<div class="hero-actions">
+						<a href="#experience" class="btn-primary">View Experience</a>
+						<a href="mailto:peree.sooler@gmail.com" class="btn-secondary">Get in Touch</a>
+					</div>
+				</div>
+				<div class="hero-badge">
+					<div class="badge-ring">
+						<span class="initials">PS</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SUMMARY -->
+		<section class="section summary-section">
+			<div class="container">
+				<p class="summary">
+					Backend Developer with a strong foundation in the <strong>.NET ecosystem</strong> and Cloud Infrastructure.
+					Expert in designing RESTful APIs using <strong>C# and ASP.NET Core</strong>, with a deep focus on SOLID principles
+					and clean architecture. Experienced in automating security and compliance workflows through
+					<strong>PowerShell and the Microsoft Graph API</strong>, bridging the gap between software development
+					and secure enterprise operations.
+				</p>
+			</div>
+		</section>
+
+		<!-- EXPERIENCE -->
+		<section id="experience" class="section">
+			<div class="container">
+				<h2 class="section-title">Experience</h2>
+
+				<div class="timeline">
+					<article class="job">
+						<div class="job-header">
+							<div>
+								<h3 class="company">Concentrix</h3>
+								<p class="role">Support Engineer — Security &amp; Compliance</p>
+							</div>
+							<div class="job-meta">
+								<span class="period">2025 – Present</span>
+								<span class="location">Remote</span>
+							</div>
+						</div>
+						<ul>
+							<li>Automated administrative tasks and compliance data reports using PowerShell scripting, reducing manual effort across daily security operations.</li>
+							<li>Integrated with Microsoft Graph API to manage enterprise identities, permissions, and access controls at scale.</li>
+							<li>Provided technical expertise in Microsoft Purview and Microsoft 365 security frameworks, supporting governance and regulatory alignment.</li>
+							<li>Debugged and remediated compliance policies and information governance configurations.</li>
+						</ul>
+						<div class="tags">
+							<span>PowerShell</span><span>Microsoft Graph API</span><span>Microsoft Purview</span><span>Microsoft 365</span>
+						</div>
+					</article>
+
+					<article class="job">
+						<div class="job-header">
+							<div>
+								<h3 class="company">Vueling Airlines / Vueling University</h3>
+								<p class="role">Backend .NET Developer</p>
+							</div>
+							<div class="job-meta">
+								<span class="period">Late 2024</span>
+								<span class="location">Viladecans, Spain</span>
+							</div>
+						</div>
+						<ul>
+							<li>Developed high-performance WebAPIs using .NET Core and C# in a fast-paced airline tech environment.</li>
+							<li>Applied SOLID design principles to deliver maintainable, scalable backend services.</li>
+							<li>Utilized Entity Framework for database abstraction and ORM management.</li>
+							<li>Implemented Unit Testing with xUnit/NUnit and Moq to enforce code quality standards.</li>
+						</ul>
+						<div class="tags">
+							<span>.NET Core</span><span>C#</span><span>Entity Framework</span><span>xUnit</span><span>NUnit</span><span>Moq</span>
+						</div>
+					</article>
+
+					<article class="job">
+						<div class="job-header">
+							<div>
+								<h3 class="company">Garoina Comunicació</h3>
+								<p class="role">Software Programmer</p>
+							</div>
+							<div class="job-meta">
+								<span class="period">2023 – 2024</span>
+								<span class="location">Platja d'Aro, Spain</span>
+							</div>
+						</div>
+						<ul>
+							<li>Developed and maintained full-stack applications with PHP, C#, and Angular across multiple client projects.</li>
+							<li>Designed and optimized relational databases using SQL Server (SSMS) and MySQL.</li>
+							<li>Documented and tested APIs using Swagger/OpenAPI, improving frontend-backend integration workflows.</li>
+							<li>Managed version control and CI/CD pipelines via GitHub.</li>
+						</ul>
+						<div class="tags">
+							<span>PHP</span><span>C#</span><span>Angular</span><span>SQL Server</span><span>MySQL</span><span>Swagger</span><span>CI/CD</span>
+						</div>
+					</article>
+
+					<article class="job">
+						<div class="job-header">
+							<div>
+								<h3 class="company">Cóndor Aretex SA</h3>
+								<p class="role">IT Programmer &amp; Help Desk</p>
+							</div>
+							<div class="job-meta">
+								<span class="period">Early 2022</span>
+								<span class="location">Arenys de Mar, Spain</span>
+							</div>
+						</div>
+						<ul>
+							<li>Built internal automation tools in Java and maintained legacy systems in COBOL.</li>
+							<li>Provided technical troubleshooting and hardware/software support for company staff.</li>
+						</ul>
+						<div class="tags">
+							<span>Java</span><span>COBOL</span><span>Help Desk</span>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- SKILLS -->
+		<section id="skills" class="section skills-section">
+			<div class="container">
+				<h2 class="section-title">Technical Skills</h2>
+				<div class="skills-grid">
+					<div class="skill-group">
+						<h4>Backend &amp; APIs</h4>
+						<div class="skill-tags">
+							<span>.NET Core</span><span>C#</span><span>ASP.NET MVC</span><span>ASP.NET Core</span>
+							<span>Microsoft Graph API</span><span>REST</span><span>Swagger / OpenAPI</span>
+						</div>
+					</div>
+					<div class="skill-group">
+						<h4>Databases &amp; ORM</h4>
+						<div class="skill-tags">
+							<span>SQL Server (SSMS)</span><span>MySQL</span><span>Entity Framework</span><span>Data Modeling</span>
+						</div>
+					</div>
+					<div class="skill-group">
+						<h4>Automation &amp; DevOps</h4>
+						<div class="skill-tags">
+							<span>PowerShell</span><span>GitHub</span><span>CI/CD</span>
+							<span>xUnit</span><span>NUnit</span><span>Moq</span>
+						</div>
+					</div>
+					<div class="skill-group">
+						<h4>Cloud &amp; Security</h4>
+						<div class="skill-tags">
+							<span>Microsoft 365</span><span>Microsoft Purview</span>
+							<span>Security &amp; Compliance</span><span>Azure (basic)</span>
+						</div>
+					</div>
+					<div class="skill-group">
+						<h4>Languages</h4>
+						<div class="skill-tags">
+							<span>C#</span><span>PHP</span><span>Java</span><span>JavaScript</span><span>COBOL</span><span>SQL</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- EDUCATION -->
+		<section id="education" class="section">
+			<div class="container">
+				<h2 class="section-title">Education &amp; Languages</h2>
+				<div class="edu-grid">
+					<div class="edu-card">
+						<div class="edu-year">2020</div>
+						<h3>Desarrollo de Aplicaciones Multiplataforma</h3>
+						<p>Escola Pia, Mataró</p>
+					</div>
+					<div class="edu-card">
+						<div class="edu-year">2014</div>
+						<h3>Sistemas Microinformáticos y Redes</h3>
+						<p>Escola Pia, Mataró</p>
+					</div>
+				</div>
+
+				<div class="languages">
+					<h3>Languages</h3>
+					<div class="lang-list">
+						<div class="lang-item">
+							<span class="lang-name">Catalan</span>
+							<span class="lang-level native">Native</span>
+						</div>
+						<div class="lang-item">
+							<span class="lang-name">Spanish</span>
+							<span class="lang-level c2">C2</span>
+						</div>
+						<div class="lang-item">
+							<span class="lang-name">English</span>
+							<span class="lang-level c1">C1 — Cambridge Proficiency</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<Footer />
 	</body>
 </html>
+
+<style>
+	:root {
+		--accent: #1d4ed8;
+		--accent-dark: #1e3a8a;
+	}
+
+	/* HERO */
+	.hero {
+		background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 50%, #3b82f6 100%);
+		color: white;
+		padding: 5em 2em 4em;
+	}
+	.hero-inner {
+		max-width: 1000px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 3em;
+	}
+	.hero-text { flex: 1; }
+	.hero h1 {
+		font-size: 3rem;
+		margin: 0 0 0.15em;
+		color: white;
+		line-height: 1.1;
+	}
+	.subtitle {
+		font-size: 1.3rem;
+		font-weight: 600;
+		margin: 0 0 0.25em;
+		color: rgba(255,255,255,0.9);
+	}
+	.tagline {
+		font-size: 0.95rem;
+		color: rgba(255,255,255,0.7);
+		margin: 0 0 1.5em;
+		font-style: italic;
+	}
+	.hero-meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1em;
+		margin-bottom: 2em;
+		font-size: 0.85rem;
+		color: rgba(255,255,255,0.85);
+	}
+	.hero-meta span,
+	.hero-meta a {
+		display: flex;
+		align-items: center;
+		gap: 0.35em;
+		color: rgba(255,255,255,0.85);
+		text-decoration: none;
+	}
+	.hero-meta a:hover { color: white; text-decoration: underline; }
+	.hero-actions { display: flex; gap: 1em; flex-wrap: wrap; }
+	.btn-primary {
+		background: white;
+		color: var(--accent);
+		padding: 0.65em 1.5em;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 0.9rem;
+		transition: transform 0.15s, box-shadow 0.15s;
+	}
+	.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+	.btn-secondary {
+		background: rgba(255,255,255,0.15);
+		color: white;
+		border: 1px solid rgba(255,255,255,0.4);
+		padding: 0.65em 1.5em;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 0.9rem;
+		transition: background 0.15s;
+	}
+	.btn-secondary:hover { background: rgba(255,255,255,0.25); color: white; }
+	.hero-badge { flex-shrink: 0; }
+	.badge-ring {
+		width: 140px;
+		height: 140px;
+		border-radius: 50%;
+		background: rgba(255,255,255,0.15);
+		border: 3px solid rgba(255,255,255,0.4);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.initials {
+		font-size: 3rem;
+		font-weight: 700;
+		color: white;
+		letter-spacing: -2px;
+	}
+
+	/* SUMMARY */
+	.summary-section { background: rgb(var(--gray-light)); }
+	.summary {
+		font-size: 1.05rem;
+		line-height: 1.8;
+		color: rgb(var(--gray-dark));
+		margin: 0;
+		max-width: 780px;
+	}
+
+	/* SECTIONS */
+	.section { padding: 4em 2em; }
+	.container { max-width: 1000px; margin: 0 auto; }
+	.section-title {
+		font-size: 1.6rem;
+		color: var(--accent);
+		margin: 0 0 2em;
+		padding-bottom: 0.5em;
+		border-bottom: 2px solid rgb(var(--gray-light));
+	}
+
+	/* TIMELINE */
+	.timeline { display: flex; flex-direction: column; gap: 2.5em; }
+	.job {
+		background: white;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 12px;
+		padding: 1.75em 2em;
+		box-shadow: var(--box-shadow);
+	}
+	.job-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 1em;
+		margin-bottom: 1em;
+		flex-wrap: wrap;
+	}
+	.company {
+		font-size: 1.15rem;
+		margin: 0 0 0.15em;
+		color: rgb(var(--black));
+	}
+	.role {
+		font-size: 0.9rem;
+		color: rgb(var(--gray));
+		margin: 0;
+		font-style: italic;
+	}
+	.job-meta {
+		text-align: right;
+		flex-shrink: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.15em;
+	}
+	.period {
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--accent);
+	}
+	.location {
+		font-size: 0.8rem;
+		color: rgb(var(--gray));
+	}
+	.job ul {
+		margin: 0 0 1.25em;
+		padding-left: 1.25em;
+		font-size: 0.9rem;
+		line-height: 1.7;
+		color: rgb(var(--gray-dark));
+	}
+	.job li { margin-bottom: 0.35em; }
+	.tags { display: flex; flex-wrap: wrap; gap: 0.4em; }
+	.tags span {
+		background: rgb(var(--gray-light));
+		color: rgb(var(--gray-dark));
+		padding: 0.2em 0.65em;
+		border-radius: 999px;
+		font-size: 0.75rem;
+		font-weight: 600;
+	}
+
+	/* SKILLS */
+	.skills-section { background: #f8faff; }
+	.skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5em; }
+	.skill-group {
+		background: white;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 12px;
+		padding: 1.5em;
+	}
+	.skill-group h4 {
+		margin: 0 0 0.75em;
+		font-size: 0.85rem;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--accent);
+	}
+	.skill-tags { display: flex; flex-wrap: wrap; gap: 0.4em; }
+	.skill-tags span {
+		background: #eff6ff;
+		color: #1d4ed8;
+		padding: 0.25em 0.7em;
+		border-radius: 999px;
+		font-size: 0.8rem;
+		font-weight: 500;
+	}
+
+	/* EDUCATION */
+	.edu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5em; margin-bottom: 2.5em; }
+	.edu-card {
+		background: white;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 12px;
+		padding: 1.5em;
+		position: relative;
+		box-shadow: var(--box-shadow);
+	}
+	.edu-year {
+		font-size: 0.8rem;
+		font-weight: 700;
+		color: var(--accent);
+		letter-spacing: 0.05em;
+		margin-bottom: 0.5em;
+	}
+	.edu-card h3 { font-size: 1rem; margin: 0 0 0.25em; color: rgb(var(--black)); }
+	.edu-card p { font-size: 0.875rem; color: rgb(var(--gray)); margin: 0; }
+
+	.languages h3 { font-size: 1rem; margin: 0 0 1em; color: rgb(var(--gray-dark)); }
+	.lang-list { display: flex; flex-wrap: wrap; gap: 1em; }
+	.lang-item { display: flex; align-items: center; gap: 0.6em; }
+	.lang-name { font-weight: 600; font-size: 0.9rem; }
+	.lang-level {
+		font-size: 0.78rem;
+		padding: 0.2em 0.65em;
+		border-radius: 999px;
+		font-weight: 600;
+	}
+	.lang-level.native { background: #d1fae5; color: #065f46; }
+	.lang-level.c2 { background: #dbeafe; color: #1e40af; }
+	.lang-level.c1 { background: #ede9fe; color: #5b21b6; }
+
+	@media (max-width: 720px) {
+		.hero-inner { flex-direction: column-reverse; gap: 1.5em; }
+		.hero h1 { font-size: 2.2rem; }
+		.badge-ring { width: 100px; height: 100px; }
+		.initials { font-size: 2.2rem; }
+		.job-header { flex-direction: column; }
+		.job-meta { text-align: left; flex-direction: row; gap: 1em; }
+	}
+</style>
