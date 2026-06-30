@@ -18,8 +18,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<div class="hero-inner">
 				<div class="hero-text">
 					<h1>Pere Soler</h1>
-					<p class="subtitle">Backend .NET Developer</p>
-					<p class="tagline">Specialized in API Development, Cloud Automation &amp; Data Security</p>
+					<p class="subtitle">Software Developer</p>
+					<p class="tagline">API Development · Cloud Automation · Data Security</p>
 					<div class="hero-meta">
 						<span>
 							<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
@@ -45,7 +45,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				</div>
 				<div class="hero-badge">
 					<div class="badge-ring">
-						<span class="initials">PS</span>
+						<img src="/avatar.jpg" alt="Pere Soler" class="avatar" />
 					</div>
 				</div>
 			</div>
@@ -324,20 +324,20 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	.btn-secondary:hover { background: rgba(255,255,255,0.25); color: white; }
 	.hero-badge { flex-shrink: 0; }
 	.badge-ring {
-		width: 140px;
-		height: 140px;
+		width: 180px;
+		height: 180px;
 		border-radius: 50%;
-		background: rgba(255,255,255,0.15);
-		border: 3px solid rgba(255,255,255,0.4);
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		border: 4px solid rgba(255,255,255,0.5);
+		box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+		overflow: hidden;
+		flex-shrink: 0;
 	}
-	.initials {
-		font-size: 3rem;
-		font-weight: 700;
-		color: white;
-		letter-spacing: -2px;
+	.avatar {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center top;
+		display: block;
 	}
 
 	/* SUMMARY */
@@ -486,8 +486,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	@media (max-width: 720px) {
 		.hero-inner { flex-direction: column-reverse; gap: 1.5em; }
 		.hero h1 { font-size: 2.2rem; }
-		.badge-ring { width: 100px; height: 100px; }
-		.initials { font-size: 2.2rem; }
+		.badge-ring { width: 120px; height: 120px; }
 		.job-header { flex-direction: column; }
 		.job-meta { text-align: left; flex-direction: row; gap: 1em; }
 	}
