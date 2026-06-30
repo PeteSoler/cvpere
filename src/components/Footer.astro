@@ -4,20 +4,14 @@ const today = new Date();
 
 <footer>
 	<div class="footer-inner">
-		<p>&copy; {today.getFullYear()} Pere Soler. All rights reserved.</p>
-		<div class="social-links">
-			<a href="mailto:peree.sooler@gmail.com" aria-label="Email">
-				<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-					<rect x="2" y="4" width="20" height="16" rx="2"/>
-					<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-				</svg>
+		<p class="copy">&copy; {today.getFullYear()} Pere Soler</p>
+		<div class="links">
+			<a href="mailto:peree.sooler@gmail.com">
+				<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
 				peree.sooler@gmail.com
 			</a>
-			<a href="https://linkedin.com/in/peresolerrigau" target="_blank" rel="noopener" aria-label="LinkedIn">
-				<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-					<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
-					<circle cx="4" cy="4" r="2"/>
-				</svg>
+			<a href="https://linkedin.com/in/peresolerrigau" target="_blank" rel="noopener">
+				<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
 				LinkedIn
 			</a>
 		</div>
@@ -26,12 +20,12 @@ const today = new Date();
 
 <style>
 	footer {
-		padding: 2em 2em;
-		background: rgb(var(--gray-dark));
-		color: rgb(var(--gray-light));
+		padding: 2em;
+		background: var(--bg-secondary);
+		border-top: 1px solid var(--border);
 	}
 	.footer-inner {
-		max-width: 1000px;
+		max-width: 1080px;
 		margin: 0 auto;
 		display: flex;
 		align-items: center;
@@ -40,18 +34,15 @@ const today = new Date();
 		gap: 1em;
 		font-size: 0.85rem;
 	}
-	.footer-inner p { margin: 0; }
-	.social-links {
-		display: flex;
-		gap: 1.5em;
-	}
-	.social-links a {
+	.copy { margin: 0; color: var(--text-faint); }
+	.links { display: flex; gap: 1.5em; }
+	.links a {
 		display: flex;
 		align-items: center;
 		gap: 0.4em;
-		color: rgb(var(--gray-light));
+		color: var(--text-muted);
 		text-decoration: none;
 		transition: color 0.15s;
 	}
-	.social-links a:hover { color: white; }
+	.links a:hover { color: var(--accent); text-decoration: none; }
 </style>

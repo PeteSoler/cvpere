@@ -15,38 +15,40 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 		<!-- HERO -->
 		<section class="hero">
+			<div class="hero-bg-orb orb1"></div>
+			<div class="hero-bg-orb orb2"></div>
 			<div class="hero-inner">
 				<div class="hero-text">
-					<h1>Pere Soler</h1>
+					<div class="badge-available">
+						<span class="dot"></span> Available for new opportunities
+					</div>
+					<h1>Pere<br /><span class="gradient-text">Soler</span></h1>
 					<p class="subtitle">Full-Stack Software Developer</p>
 					<p class="tagline">Frontend · Backend · API Design · Web Applications</p>
 					<div class="hero-meta">
 						<span>
-							<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+							<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
 							Catalonia, Spain
 						</span>
 						<a href="mailto:peree.sooler@gmail.com">
-							<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+							<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
 							peree.sooler@gmail.com
 						</a>
-						<a href="tel:+34608760927">
-							<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
-							+34 608 760 927
-						</a>
 						<a href="https://linkedin.com/in/peresolerrigau" target="_blank" rel="noopener">
-							<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+							<svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
 							LinkedIn
 						</a>
 					</div>
 					<div class="hero-actions">
 						<a href="#experience" class="btn-primary">View Experience</a>
-						<a href="mailto:peree.sooler@gmail.com" class="btn-secondary">Get in Touch</a>
+						<a href="mailto:peree.sooler@gmail.com" class="btn-ghost">Get in Touch</a>
 					</div>
 				</div>
-				<div class="hero-badge">
-					<div class="badge-ring">
+				<div class="hero-photo-wrap">
+					<div class="photo-ring">
 						<img src="/avatar.jpg" alt="Pere Soler" class="avatar" />
 					</div>
+					<div class="photo-glow"></div>
 				</div>
 			</div>
 		</section>
@@ -54,12 +56,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<!-- SUMMARY -->
 		<section class="section summary-section">
 			<div class="container">
+				<p class="eyebrow">About me</p>
 				<p class="summary">
-					Backend Developer with a strong foundation in the <strong>.NET ecosystem</strong> and Cloud Infrastructure.
-					Expert in designing RESTful APIs using <strong>C# and ASP.NET Core</strong>, with a deep focus on SOLID principles
-					and clean architecture. Experienced in automating security and compliance workflows through
-					<strong>PowerShell and the Microsoft Graph API</strong>, bridging the gap between software development
-					and secure enterprise operations.
+					Full-Stack Developer with hands-on experience building <strong>web applications end-to-end</strong> —
+					from crafting responsive, user-facing interfaces to designing and shipping robust
+					<strong>RESTful APIs and backend services</strong> in C# and .NET. I care deeply about
+					clean architecture, SOLID principles, and writing code that's as maintainable as it is performant.
+					Whether it's wiring up a React front-end, architecting a database schema, or automating workflows
+					through scripting and APIs, I bring a <strong>full-stack mindset</strong> to every project.
 				</p>
 			</div>
 		</section>
@@ -67,92 +71,105 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<!-- EXPERIENCE -->
 		<section id="experience" class="section">
 			<div class="container">
+				<p class="eyebrow">Career</p>
 				<h2 class="section-title">Experience</h2>
 
 				<div class="timeline">
 					<article class="job">
-						<div class="job-header">
-							<div>
-								<h3 class="company">Concentrix</h3>
-								<p class="role">Support Engineer — Security &amp; Compliance</p>
+						<div class="job-accent"></div>
+						<div class="job-body">
+							<div class="job-header">
+								<div>
+									<h3 class="company">Concentrix</h3>
+									<p class="role">Support Engineer — Security &amp; Compliance</p>
+								</div>
+								<div class="job-meta">
+									<span class="period">2025 – Present</span>
+									<span class="location">Remote</span>
+								</div>
 							</div>
-							<div class="job-meta">
-								<span class="period">2025 – Present</span>
-								<span class="location">Remote</span>
+							<ul>
+								<li>Automated administrative tasks and compliance data reports using PowerShell scripting, reducing manual effort across daily security operations.</li>
+								<li>Integrated with Microsoft Graph API to manage enterprise identities, permissions, and access controls at scale.</li>
+								<li>Provided technical expertise in Microsoft Purview and Microsoft 365 security frameworks, supporting governance and regulatory alignment.</li>
+								<li>Debugged and remediated compliance policies and information governance configurations.</li>
+							</ul>
+							<div class="tags">
+								<span>PowerShell</span><span>Microsoft Graph API</span><span>Microsoft Purview</span><span>Microsoft 365</span>
 							</div>
-						</div>
-						<ul>
-							<li>Automated administrative tasks and compliance data reports using PowerShell scripting, reducing manual effort across daily security operations.</li>
-							<li>Integrated with Microsoft Graph API to manage enterprise identities, permissions, and access controls at scale.</li>
-							<li>Provided technical expertise in Microsoft Purview and Microsoft 365 security frameworks, supporting governance and regulatory alignment.</li>
-							<li>Debugged and remediated compliance policies and information governance configurations.</li>
-						</ul>
-						<div class="tags">
-							<span>PowerShell</span><span>Microsoft Graph API</span><span>Microsoft Purview</span><span>Microsoft 365</span>
 						</div>
 					</article>
 
 					<article class="job">
-						<div class="job-header">
-							<div>
-								<h3 class="company">Vueling Airlines / Vueling University</h3>
-								<p class="role">Backend .NET Developer</p>
+						<div class="job-accent"></div>
+						<div class="job-body">
+							<div class="job-header">
+								<div>
+									<h3 class="company">Vueling Airlines / Vueling University</h3>
+									<p class="role">Backend .NET Developer</p>
+								</div>
+								<div class="job-meta">
+									<span class="period">Late 2024</span>
+									<span class="location">Viladecans, Spain</span>
+								</div>
 							</div>
-							<div class="job-meta">
-								<span class="period">Late 2024</span>
-								<span class="location">Viladecans, Spain</span>
+							<ul>
+								<li>Developed high-performance WebAPIs using .NET Core and C# in a fast-paced airline tech environment.</li>
+								<li>Applied SOLID design principles to deliver maintainable, scalable backend services.</li>
+								<li>Utilized Entity Framework for database abstraction and ORM management.</li>
+								<li>Implemented Unit Testing with xUnit/NUnit and Moq to enforce code quality standards.</li>
+							</ul>
+							<div class="tags">
+								<span>.NET Core</span><span>C#</span><span>Entity Framework</span><span>xUnit</span><span>NUnit</span><span>Moq</span>
 							</div>
-						</div>
-						<ul>
-							<li>Developed high-performance WebAPIs using .NET Core and C# in a fast-paced airline tech environment.</li>
-							<li>Applied SOLID design principles to deliver maintainable, scalable backend services.</li>
-							<li>Utilized Entity Framework for database abstraction and ORM management.</li>
-							<li>Implemented Unit Testing with xUnit/NUnit and Moq to enforce code quality standards.</li>
-						</ul>
-						<div class="tags">
-							<span>.NET Core</span><span>C#</span><span>Entity Framework</span><span>xUnit</span><span>NUnit</span><span>Moq</span>
 						</div>
 					</article>
 
 					<article class="job">
-						<div class="job-header">
-							<div>
-								<h3 class="company">Garoina Comunicació</h3>
-								<p class="role">Software Programmer</p>
+						<div class="job-accent"></div>
+						<div class="job-body">
+							<div class="job-header">
+								<div>
+									<h3 class="company">Garoina Comunicació</h3>
+									<p class="role">Software Programmer</p>
+								</div>
+								<div class="job-meta">
+									<span class="period">2023 – 2024</span>
+									<span class="location">Platja d'Aro, Spain</span>
+								</div>
 							</div>
-							<div class="job-meta">
-								<span class="period">2023 – 2024</span>
-								<span class="location">Platja d'Aro, Spain</span>
+							<ul>
+								<li>Developed and maintained full-stack applications with PHP, C#, and Angular across multiple client projects.</li>
+								<li>Designed and optimized relational databases using SQL Server (SSMS) and MySQL.</li>
+								<li>Documented and tested APIs using Swagger/OpenAPI, improving frontend-backend integration workflows.</li>
+								<li>Managed version control and CI/CD pipelines via GitHub.</li>
+							</ul>
+							<div class="tags">
+								<span>PHP</span><span>C#</span><span>Angular</span><span>SQL Server</span><span>MySQL</span><span>Swagger</span><span>CI/CD</span>
 							</div>
-						</div>
-						<ul>
-							<li>Developed and maintained full-stack applications with PHP, C#, and Angular across multiple client projects.</li>
-							<li>Designed and optimized relational databases using SQL Server (SSMS) and MySQL.</li>
-							<li>Documented and tested APIs using Swagger/OpenAPI, improving frontend-backend integration workflows.</li>
-							<li>Managed version control and CI/CD pipelines via GitHub.</li>
-						</ul>
-						<div class="tags">
-							<span>PHP</span><span>C#</span><span>Angular</span><span>SQL Server</span><span>MySQL</span><span>Swagger</span><span>CI/CD</span>
 						</div>
 					</article>
 
 					<article class="job">
-						<div class="job-header">
-							<div>
-								<h3 class="company">Cóndor Aretex SA</h3>
-								<p class="role">IT Programmer &amp; Help Desk</p>
+						<div class="job-accent"></div>
+						<div class="job-body">
+							<div class="job-header">
+								<div>
+									<h3 class="company">Cóndor Aretex SA</h3>
+									<p class="role">IT Programmer &amp; Help Desk</p>
+								</div>
+								<div class="job-meta">
+									<span class="period">Early 2022</span>
+									<span class="location">Arenys de Mar, Spain</span>
+								</div>
 							</div>
-							<div class="job-meta">
-								<span class="period">Early 2022</span>
-								<span class="location">Arenys de Mar, Spain</span>
+							<ul>
+								<li>Built internal automation tools in Java and maintained legacy systems in COBOL.</li>
+								<li>Provided technical troubleshooting and hardware/software support for company staff.</li>
+							</ul>
+							<div class="tags">
+								<span>Java</span><span>COBOL</span><span>Help Desk</span>
 							</div>
-						</div>
-						<ul>
-							<li>Built internal automation tools in Java and maintained legacy systems in COBOL.</li>
-							<li>Provided technical troubleshooting and hardware/software support for company staff.</li>
-						</ul>
-						<div class="tags">
-							<span>Java</span><span>COBOL</span><span>Help Desk</span>
 						</div>
 					</article>
 				</div>
@@ -162,9 +179,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<!-- SKILLS -->
 		<section id="skills" class="section skills-section">
 			<div class="container">
+				<p class="eyebrow">What I work with</p>
 				<h2 class="section-title">Technical Skills</h2>
 				<div class="skills-grid">
 					<div class="skill-group">
+						<div class="skill-icon">⚙️</div>
 						<h4>Backend &amp; APIs</h4>
 						<div class="skill-tags">
 							<span>.NET Core</span><span>C#</span><span>ASP.NET MVC</span><span>ASP.NET Core</span>
@@ -172,12 +191,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						</div>
 					</div>
 					<div class="skill-group">
+						<div class="skill-icon">🗄️</div>
 						<h4>Databases &amp; ORM</h4>
 						<div class="skill-tags">
 							<span>SQL Server (SSMS)</span><span>MySQL</span><span>Entity Framework</span><span>Data Modeling</span>
 						</div>
 					</div>
 					<div class="skill-group">
+						<div class="skill-icon">🚀</div>
 						<h4>Automation &amp; DevOps</h4>
 						<div class="skill-tags">
 							<span>PowerShell</span><span>GitHub</span><span>CI/CD</span>
@@ -185,6 +206,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						</div>
 					</div>
 					<div class="skill-group">
+						<div class="skill-icon">☁️</div>
 						<h4>Cloud &amp; Security</h4>
 						<div class="skill-tags">
 							<span>Microsoft 365</span><span>Microsoft Purview</span>
@@ -192,6 +214,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						</div>
 					</div>
 					<div class="skill-group">
+						<div class="skill-icon">💻</div>
 						<h4>Languages</h4>
 						<div class="skill-tags">
 							<span>C#</span><span>PHP</span><span>Java</span><span>JavaScript</span><span>COBOL</span><span>SQL</span>
@@ -204,6 +227,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<!-- EDUCATION -->
 		<section id="education" class="section">
 			<div class="container">
+				<p class="eyebrow">Background</p>
 				<h2 class="section-title">Education &amp; Languages</h2>
 				<div class="edu-grid">
 					<div class="edu-card">
@@ -217,7 +241,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						<p>Escola Pia, Mataró</p>
 					</div>
 				</div>
-
 				<div class="languages">
 					<h3>Languages</h3>
 					<div class="lang-list">
@@ -243,94 +266,163 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 </html>
 
 <style>
-	:root {
-		--accent: #1d4ed8;
-		--accent-dark: #1e3a8a;
-	}
-
-	/* HERO */
+	/* ── HERO ── */
 	.hero {
-		background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 50%, #3b82f6 100%);
-		color: white;
-		padding: 5em 2em 4em;
+		position: relative;
+		overflow: hidden;
+		padding: 6em 2em 5em;
+		background: var(--bg);
+	}
+	.hero-bg-orb {
+		position: absolute;
+		border-radius: 50%;
+		filter: blur(80px);
+		opacity: 0.25;
+		pointer-events: none;
+	}
+	[data-theme="dark"] .hero-bg-orb { opacity: 0.18; }
+	.orb1 {
+		width: 600px; height: 600px;
+		background: radial-gradient(circle, var(--accent), transparent 70%);
+		top: -200px; left: -150px;
+	}
+	.orb2 {
+		width: 500px; height: 500px;
+		background: radial-gradient(circle, var(--accent2), transparent 70%);
+		bottom: -150px; right: -100px;
 	}
 	.hero-inner {
-		max-width: 1000px;
+		position: relative;
+		max-width: 1080px;
 		margin: 0 auto;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 3em;
+		gap: 4em;
 	}
 	.hero-text { flex: 1; }
+
+	.badge-available {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5em;
+		background: var(--bg-secondary);
+		border: 1px solid var(--border);
+		border-radius: 999px;
+		padding: 0.3em 1em;
+		font-size: 0.8rem;
+		color: var(--text-muted);
+		margin-bottom: 1.25em;
+	}
+	.dot {
+		width: 8px; height: 8px;
+		border-radius: 50%;
+		background: #22c55e;
+		box-shadow: 0 0 0 3px rgba(34,197,94,0.25);
+		animation: pulse 2s infinite;
+	}
+	@keyframes pulse {
+		0%, 100% { box-shadow: 0 0 0 3px rgba(34,197,94,0.25); }
+		50%       { box-shadow: 0 0 0 6px rgba(34,197,94,0.1); }
+	}
+
 	.hero h1 {
-		font-size: 3rem;
-		margin: 0 0 0.15em;
-		color: white;
-		line-height: 1.1;
+		font-size: clamp(3rem, 8vw, 5rem);
+		font-weight: 700;
+		line-height: 1.05;
+		margin-bottom: 0.3em;
+		color: var(--text);
+	}
+	.gradient-text {
+		background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
 	}
 	.subtitle {
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 		font-weight: 600;
-		margin: 0 0 0.25em;
-		color: rgba(255,255,255,0.9);
+		color: var(--text);
+		margin: 0 0 0.3em;
 	}
 	.tagline {
-		font-size: 0.95rem;
-		color: rgba(255,255,255,0.7);
-		margin: 0 0 1.5em;
-		font-style: italic;
+		font-size: 0.9rem;
+		color: var(--text-muted);
+		margin: 0 0 1.75em;
+		letter-spacing: 0.04em;
 	}
 	.hero-meta {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1em;
+		gap: 1.25em;
 		margin-bottom: 2em;
-		font-size: 0.85rem;
-		color: rgba(255,255,255,0.85);
+		font-size: 0.83rem;
 	}
 	.hero-meta span,
 	.hero-meta a {
 		display: flex;
 		align-items: center;
-		gap: 0.35em;
-		color: rgba(255,255,255,0.85);
+		gap: 0.4em;
+		color: var(--text-muted);
 		text-decoration: none;
+		transition: color 0.15s;
 	}
-	.hero-meta a:hover { color: white; text-decoration: underline; }
-	.hero-actions { display: flex; gap: 1em; flex-wrap: wrap; }
+	.hero-meta a:hover { color: var(--accent); text-decoration: none; }
+
+	.hero-actions { display: flex; gap: 0.75em; flex-wrap: wrap; }
 	.btn-primary {
-		background: white;
-		color: var(--accent);
-		padding: 0.65em 1.5em;
-		border-radius: 8px;
-		text-decoration: none;
+		display: inline-block;
+		background: linear-gradient(135deg, var(--accent), var(--accent2));
+		color: #fff;
+		padding: 0.7em 1.6em;
+		border-radius: 10px;
 		font-weight: 700;
 		font-size: 0.9rem;
-		transition: transform 0.15s, box-shadow 0.15s;
-	}
-	.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-	.btn-secondary {
-		background: rgba(255,255,255,0.15);
-		color: white;
-		border: 1px solid rgba(255,255,255,0.4);
-		padding: 0.65em 1.5em;
-		border-radius: 8px;
 		text-decoration: none;
+		box-shadow: 0 4px 20px var(--accent-glow);
+		transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+	}
+	.btn-primary:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 28px var(--accent-glow);
+		opacity: 0.95;
+		text-decoration: none;
+	}
+	.btn-ghost {
+		display: inline-block;
+		background: transparent;
+		color: var(--text);
+		border: 1px solid var(--border-card);
+		padding: 0.7em 1.6em;
+		border-radius: 10px;
 		font-weight: 600;
 		font-size: 0.9rem;
-		transition: background 0.15s;
+		text-decoration: none;
+		transition: background 0.15s, border-color 0.15s;
 	}
-	.btn-secondary:hover { background: rgba(255,255,255,0.25); color: white; }
-	.hero-badge { flex-shrink: 0; }
-	.badge-ring {
-		width: 180px;
-		height: 180px;
-		border-radius: 50%;
-		border: 4px solid rgba(255,255,255,0.5);
-		box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-		overflow: hidden;
+	.btn-ghost:hover {
+		background: var(--bg-secondary);
+		border-color: var(--accent);
+		color: var(--accent);
+		text-decoration: none;
+	}
+
+	/* PHOTO */
+	.hero-photo-wrap {
+		position: relative;
 		flex-shrink: 0;
+	}
+	.photo-ring {
+		width: 220px;
+		height: 220px;
+		border-radius: 50%;
+		overflow: hidden;
+		border: 3px solid transparent;
+		background: linear-gradient(var(--bg), var(--bg)) padding-box,
+		            linear-gradient(135deg, var(--accent), var(--accent2)) border-box;
+		box-shadow: var(--shadow-lg);
+		position: relative;
+		z-index: 1;
 	}
 	.avatar {
 		width: 100%;
@@ -339,37 +431,78 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		object-position: center top;
 		display: block;
 	}
-
-	/* SUMMARY */
-	.summary-section { background: rgb(var(--gray-light)); }
-	.summary {
-		font-size: 1.05rem;
-		line-height: 1.8;
-		color: rgb(var(--gray-dark));
-		margin: 0;
-		max-width: 780px;
+	.photo-glow {
+		position: absolute;
+		inset: -20px;
+		border-radius: 50%;
+		background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+		z-index: 0;
+		animation: glow-pulse 3s ease-in-out infinite;
+	}
+	@keyframes glow-pulse {
+		0%, 100% { opacity: 0.6; transform: scale(1); }
+		50%       { opacity: 1;   transform: scale(1.05); }
 	}
 
-	/* SECTIONS */
-	.section { padding: 4em 2em; }
-	.container { max-width: 1000px; margin: 0 auto; }
+	/* ── SHARED ── */
+	.section { padding: 5em 2em; }
+	.container { max-width: 1080px; margin: 0 auto; }
+
+	.eyebrow {
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		background: linear-gradient(135deg, var(--accent), var(--accent2));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		margin: 0 0 0.4em;
+	}
 	.section-title {
-		font-size: 1.6rem;
-		color: var(--accent);
+		font-size: 2rem;
+		font-weight: 700;
+		color: var(--text);
 		margin: 0 0 2em;
-		padding-bottom: 0.5em;
-		border-bottom: 2px solid rgb(var(--gray-light));
 	}
 
-	/* TIMELINE */
-	.timeline { display: flex; flex-direction: column; gap: 2.5em; }
-	.job {
-		background: white;
-		border: 1px solid rgb(var(--gray-light));
-		border-radius: 12px;
-		padding: 1.75em 2em;
-		box-shadow: var(--box-shadow);
+	/* ── SUMMARY ── */
+	.summary-section {
+		background: var(--bg-secondary);
+		border-top: 1px solid var(--border);
+		border-bottom: 1px solid var(--border);
+		padding: 3.5em 2em;
 	}
+	.summary {
+		font-size: 1.1rem;
+		line-height: 1.9;
+		color: var(--text-muted);
+		max-width: 780px;
+		margin: 0;
+	}
+	.summary strong { color: var(--text); }
+
+	/* ── TIMELINE ── */
+	.timeline { display: flex; flex-direction: column; gap: 1.5em; }
+	.job {
+		display: flex;
+		background: var(--bg-card);
+		border: 1px solid var(--border-card);
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: var(--shadow-md);
+		transition: transform 0.2s, box-shadow 0.2s;
+	}
+	.job:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--shadow-lg);
+	}
+	.job-accent {
+		width: 4px;
+		flex-shrink: 0;
+		background: linear-gradient(180deg, var(--accent), var(--accent2));
+	}
+	.job-body { padding: 1.75em 2em; flex: 1; }
 	.job-header {
 		display: flex;
 		justify-content: space-between;
@@ -378,116 +511,141 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		margin-bottom: 1em;
 		flex-wrap: wrap;
 	}
-	.company {
-		font-size: 1.15rem;
-		margin: 0 0 0.15em;
-		color: rgb(var(--black));
-	}
-	.role {
-		font-size: 0.9rem;
-		color: rgb(var(--gray));
-		margin: 0;
-		font-style: italic;
-	}
-	.job-meta {
-		text-align: right;
-		flex-shrink: 0;
-		display: flex;
-		flex-direction: column;
-		gap: 0.15em;
-	}
+	.company { font-size: 1.1rem; margin: 0 0 0.15em; color: var(--text); }
+	.role { font-size: 0.875rem; color: var(--text-muted); margin: 0; font-style: italic; }
+	.job-meta { text-align: right; flex-shrink: 0; }
 	.period {
-		font-size: 0.85rem;
-		font-weight: 600;
-		color: var(--accent);
+		display: block;
+		font-size: 0.82rem;
+		font-weight: 700;
+		background: linear-gradient(135deg, var(--accent), var(--accent2));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
 	}
-	.location {
-		font-size: 0.8rem;
-		color: rgb(var(--gray));
-	}
+	.location { display: block; font-size: 0.78rem; color: var(--text-faint); margin-top: 0.15em; }
 	.job ul {
 		margin: 0 0 1.25em;
-		padding-left: 1.25em;
-		font-size: 0.9rem;
-		line-height: 1.7;
-		color: rgb(var(--gray-dark));
+		padding-left: 1.2em;
+		font-size: 0.88rem;
+		line-height: 1.75;
+		color: var(--text-muted);
 	}
-	.job li { margin-bottom: 0.35em; }
+	.job li { margin-bottom: 0.4em; }
 	.tags { display: flex; flex-wrap: wrap; gap: 0.4em; }
 	.tags span {
-		background: rgb(var(--gray-light));
-		color: rgb(var(--gray-dark));
-		padding: 0.2em 0.65em;
+		background: var(--bg-secondary);
+		color: var(--text-muted);
+		border: 1px solid var(--border);
+		padding: 0.2em 0.7em;
 		border-radius: 999px;
-		font-size: 0.75rem;
+		font-size: 0.73rem;
 		font-weight: 600;
+		letter-spacing: 0.02em;
 	}
 
-	/* SKILLS */
-	.skills-section { background: #f8faff; }
-	.skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5em; }
-	.skill-group {
-		background: white;
-		border: 1px solid rgb(var(--gray-light));
-		border-radius: 12px;
-		padding: 1.5em;
+	/* ── SKILLS ── */
+	.skills-section {
+		background: var(--bg-secondary);
+		border-top: 1px solid var(--border);
+		border-bottom: 1px solid var(--border);
 	}
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: 1.25em;
+	}
+	.skill-group {
+		background: var(--bg-card);
+		border: 1px solid var(--border-card);
+		border-radius: 14px;
+		padding: 1.5em;
+		box-shadow: var(--shadow-sm);
+		transition: transform 0.2s, box-shadow 0.2s;
+	}
+	.skill-group:hover {
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-md);
+	}
+	.skill-icon { font-size: 1.5rem; margin-bottom: 0.6em; }
 	.skill-group h4 {
 		margin: 0 0 0.75em;
-		font-size: 0.85rem;
+		font-size: 0.8rem;
 		text-transform: uppercase;
 		letter-spacing: 0.08em;
-		color: var(--accent);
+		color: var(--text-muted);
 	}
 	.skill-tags { display: flex; flex-wrap: wrap; gap: 0.4em; }
 	.skill-tags span {
-		background: #eff6ff;
-		color: #1d4ed8;
+		background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(168,85,247,0.1));
+		color: var(--accent);
+		border: 1px solid var(--border);
 		padding: 0.25em 0.7em;
 		border-radius: 999px;
-		font-size: 0.8rem;
+		font-size: 0.78rem;
 		font-weight: 500;
 	}
 
-	/* EDUCATION */
-	.edu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5em; margin-bottom: 2.5em; }
+	/* ── EDUCATION ── */
+	.edu-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: 1.25em;
+		margin-bottom: 2.5em;
+	}
 	.edu-card {
-		background: white;
-		border: 1px solid rgb(var(--gray-light));
-		border-radius: 12px;
+		background: var(--bg-card);
+		border: 1px solid var(--border-card);
+		border-radius: 14px;
 		padding: 1.5em;
-		position: relative;
-		box-shadow: var(--box-shadow);
+		box-shadow: var(--shadow-sm);
 	}
 	.edu-year {
-		font-size: 0.8rem;
+		font-size: 0.75rem;
 		font-weight: 700;
-		color: var(--accent);
-		letter-spacing: 0.05em;
+		letter-spacing: 0.08em;
+		background: linear-gradient(135deg, var(--accent), var(--accent2));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
 		margin-bottom: 0.5em;
 	}
-	.edu-card h3 { font-size: 1rem; margin: 0 0 0.25em; color: rgb(var(--black)); }
-	.edu-card p { font-size: 0.875rem; color: rgb(var(--gray)); margin: 0; }
+	.edu-card h3 { font-size: 0.95rem; margin: 0 0 0.25em; color: var(--text); }
+	.edu-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
 
-	.languages h3 { font-size: 1rem; margin: 0 0 1em; color: rgb(var(--gray-dark)); }
-	.lang-list { display: flex; flex-wrap: wrap; gap: 1em; }
-	.lang-item { display: flex; align-items: center; gap: 0.6em; }
-	.lang-name { font-weight: 600; font-size: 0.9rem; }
+	.languages h3 { font-size: 1rem; margin: 0 0 1em; color: var(--text-muted); font-weight: 600; }
+	.lang-list { display: flex; flex-wrap: wrap; gap: 0.75em; }
+	.lang-item {
+		display: flex;
+		align-items: center;
+		gap: 0.6em;
+		background: var(--bg-card);
+		border: 1px solid var(--border-card);
+		border-radius: 10px;
+		padding: 0.5em 1em;
+		box-shadow: var(--shadow-sm);
+	}
+	.lang-name { font-weight: 600; font-size: 0.875rem; color: var(--text); }
 	.lang-level {
-		font-size: 0.78rem;
+		font-size: 0.75rem;
 		padding: 0.2em 0.65em;
 		border-radius: 999px;
 		font-weight: 600;
 	}
-	.lang-level.native { background: #d1fae5; color: #065f46; }
-	.lang-level.c2 { background: #dbeafe; color: #1e40af; }
-	.lang-level.c1 { background: #ede9fe; color: #5b21b6; }
+	.lang-level.native { background: rgba(34,197,94,0.15); color: #16a34a; }
+	.lang-level.c2     { background: rgba(99,102,241,0.15); color: var(--accent); }
+	.lang-level.c1     { background: rgba(168,85,247,0.15); color: var(--accent2); }
+	[data-theme="dark"] .lang-level.native { background: rgba(34,197,94,0.2); color: #4ade80; }
+	[data-theme="dark"] .lang-level.c2     { background: rgba(99,102,241,0.2); color: #818cf8; }
+	[data-theme="dark"] .lang-level.c1     { background: rgba(168,85,247,0.2); color: #c084fc; }
 
-	@media (max-width: 720px) {
-		.hero-inner { flex-direction: column-reverse; gap: 1.5em; }
-		.hero h1 { font-size: 2.2rem; }
-		.badge-ring { width: 120px; height: 120px; }
+	/* ── RESPONSIVE ── */
+	@media (max-width: 768px) {
+		.hero-inner { flex-direction: column-reverse; gap: 2em; }
+		.hero h1 { font-size: 3rem; }
+		.photo-ring { width: 150px; height: 150px; }
 		.job-header { flex-direction: column; }
-		.job-meta { text-align: left; flex-direction: row; gap: 1em; }
+		.job-meta { text-align: left; }
+		.section { padding: 3.5em 1.25em; }
 	}
 </style>
