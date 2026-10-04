@@ -1,4 +1,4 @@
-// Generates PereSoler_CV.pdf (one A4 page) from the same content as the website (src/pages/index.astro).
+// Generates public/PereSoler_CV.pdf (one A4 page, served by the site's Download CV button) from the same content as the website (src/pages/index.astro).
 // Usage: cd cv && npm install && npm run build
 import PDFDocument from 'pdfkit';
 import fs from 'node:fs';
@@ -119,7 +119,7 @@ const BULLET_STEP = 10.6; // between bullets
 const WRAP_STEP = 9.6; // wrapped line inside a bullet
 
 const doc = new PDFDocument({ size: 'A4', margin: 0, info: { Title: 'Pere Soler — CV', Author: 'Pere Soler' } });
-const out = process.argv[2] ?? path.join(here, 'PereSoler_CV.pdf');
+const out = process.argv[2] ?? path.join(here, '..', 'public', 'PereSoler_CV.pdf');
 doc.pipe(fs.createWriteStream(out));
 
 // Draw text with its alphabetic baseline at y.
