@@ -1,8 +1,11 @@
-﻿---
+---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { cv, richText } from '../data/cv';
+
+const [firstName, ...lastNames] = cv.name.split(' ');
 ---
 
 <!doctype html>
@@ -22,31 +25,31 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					<div class="badge-available">
 						<span class="dot"></span> Available for new opportunities
 					</div>
-					<h1>Pere<br /><span class="gradient-text">Soler</span></h1>
-					<p class="subtitle">Full-Stack Software Developer</p>
-					<p class="tagline">Frontend · Backend · API Design · Web Applications</p>
+					<h1>{firstName}<br /><span class="gradient-text">{lastNames.join(' ')}</span></h1>
+					<p class="subtitle">{cv.title}</p>
+					<p class="tagline">{cv.tagline}</p>
 					<div class="hero-meta">
 						<span>
 							<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-							Catalonia, Spain
+							{cv.location}
 						</span>
-						<a href="mailto:peree.sooler@gmail.com">
+						<a href={`mailto:${cv.email}`}>
 							<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-							peree.sooler@gmail.com
+							{cv.email}
 						</a>
-						<a href="https://linkedin.com/in/peresolerrigau" target="_blank" rel="noopener">
+						<a href={`https://${cv.linkedin}`} target="_blank" rel="noopener">
 							<svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
 							LinkedIn
 						</a>
 					</div>
 					<div class="hero-actions">
 						<a href="#experience" class="btn-primary">View Experience</a>
-						<a href="mailto:peree.sooler@gmail.com" class="btn-ghost">Get in Touch</a>
+						<a href={`mailto:${cv.email}`} class="btn-ghost">Get in Touch</a>
 					</div>
 				</div>
 				<div class="hero-photo-wrap">
 					<div class="photo-ring">
-						<img src="/avatar.jpg" alt="Pere Soler" class="avatar" />
+						<img src="/avatar.jpg" alt={cv.name} class="avatar" />
 					</div>
 					<div class="photo-glow"></div>
 				</div>
@@ -58,12 +61,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<div class="container">
 				<p class="eyebrow">About me</p>
 				<p class="summary">
-					Full-Stack Developer with hands-on experience building <strong>web applications end-to-end</strong> —
-					from crafting responsive, user-facing interfaces to designing and shipping robust
-					<strong>RESTful APIs and backend services</strong> in C# and .NET. I care deeply about
-					clean architecture, SOLID principles, and writing code that's as maintainable as it is performant.
-					Whether it's wiring up a front-end, architecting a database schema, or <strong>integrating LLM-powered features and AI tooling</strong>
-					into backend services, I bring a full-stack mindset to every project.
+					{richText(cv.about).map((s) => (s.bold ? <strong>{s.text}</strong> : s.text))}
 				</p>
 			</div>
 		</section>
@@ -75,127 +73,29 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<h2 class="section-title">Experience</h2>
 
 				<div class="timeline">
-					<article class="job">
-						<div class="job-accent"></div>
-						<div class="job-body">
-							<div class="job-header">
-								<div>
-									<h3 class="company">Hitachi Energy</h3>
-									<p class="role">Technical Support Specialist — .NET &amp; SQL</p>
+					{cv.jobs.map((job) => (
+						<article class="job">
+							<div class="job-accent"></div>
+							<div class="job-body">
+								<div class="job-header">
+									<div>
+										<h3 class="company">{job.company}</h3>
+										<p class="role">{job.role}</p>
+									</div>
+									<div class="job-meta">
+										<span class="period">{job.period}</span>
+										<span class="location">{job.location}</span>
+									</div>
 								</div>
-								<div class="job-meta">
-									<span class="period">Mid 2026 – Present</span>
-									<span class="location">Barcelona, Spain · Hybrid</span>
-								</div>
-							</div>
-							<ul>
-								<li>Providing technical support and development expertise in .NET Framework and SQL across enterprise energy management systems.</li>
-								<li>Diagnosing and resolving application issues in a hybrid environment, collaborating with cross-functional teams to ensure system reliability.</li>
-								<li>Supporting internal tooling and backend services built on .NET, maintaining data integrity through SQL database management.</li>
-							</ul>
-							<div class="tags">
-								<span>.NET Framework</span><span>SQL</span><span>Technical Support</span><span>Barcelona</span>
-							</div>
-						</div>
-					</article>
-
-					<article class="job">
-						<div class="job-accent"></div>
-						<div class="job-body">
-							<div class="job-header">
-								<div>
-									<h3 class="company">Concentrix</h3>
-									<p class="role">Support Engineer — Security &amp; Compliance</p>
-								</div>
-								<div class="job-meta">
-									<span class="period">2025 – Mid 2026</span>
-									<span class="location">Remote</span>
+								<ul>
+									{job.bullets.map((b) => <li>{b}</li>)}
+								</ul>
+								<div class="tags">
+									{job.tags.map((t) => <span>{t}</span>)}
 								</div>
 							</div>
-							<ul>
-								<li>Automated administrative tasks and compliance data reports using PowerShell scripting, reducing manual effort across daily security operations.</li>
-								<li>Integrated with Microsoft Graph API to manage enterprise identities, permissions, and access controls at scale.</li>
-								<li>Provided technical expertise in Microsoft Purview and Microsoft 365 security frameworks, supporting governance and regulatory alignment.</li>
-								<li>Debugged and remediated compliance policies and information governance configurations.</li>
-							</ul>
-							<div class="tags">
-								<span>PowerShell</span><span>Microsoft Graph API</span><span>Microsoft Purview</span><span>Microsoft 365</span>
-							</div>
-						</div>
-					</article>
-
-					<article class="job">
-						<div class="job-accent"></div>
-						<div class="job-body">
-							<div class="job-header">
-								<div>
-									<h3 class="company">Vueling Airlines / Vueling University</h3>
-									<p class="role">Backend .NET Developer</p>
-								</div>
-								<div class="job-meta">
-									<span class="period">Late 2024</span>
-									<span class="location">Viladecans, Spain</span>
-								</div>
-							</div>
-							<ul>
-								<li>Developed high-performance WebAPIs using .NET Core and C# in a fast-paced airline tech environment.</li>
-								<li>Applied SOLID design principles to deliver maintainable, scalable backend services.</li>
-								<li>Utilized Entity Framework for database abstraction and ORM management.</li>
-								<li>Implemented Unit Testing with xUnit/NUnit and Moq to enforce code quality standards.</li>
-							</ul>
-							<div class="tags">
-								<span>.NET Core</span><span>C#</span><span>Entity Framework</span><span>xUnit</span><span>NUnit</span><span>Moq</span>
-							</div>
-						</div>
-					</article>
-
-					<article class="job">
-						<div class="job-accent"></div>
-						<div class="job-body">
-							<div class="job-header">
-								<div>
-									<h3 class="company">Garoina Comunicació</h3>
-									<p class="role">Software Programmer</p>
-								</div>
-								<div class="job-meta">
-									<span class="period">2023 – 2024</span>
-									<span class="location">Platja d'Aro, Spain</span>
-								</div>
-							</div>
-							<ul>
-								<li>Developed and maintained full-stack applications with PHP, C#, and Angular across multiple client projects.</li>
-								<li>Designed and optimized relational databases using SQL Server (SSMS) and MySQL.</li>
-								<li>Documented and tested APIs using Swagger/OpenAPI, improving frontend-backend integration workflows.</li>
-								<li>Managed version control and CI/CD pipelines via GitHub.</li>
-							</ul>
-							<div class="tags">
-								<span>PHP</span><span>C#</span><span>Angular</span><span>SQL Server</span><span>MySQL</span><span>Swagger</span><span>CI/CD</span>
-							</div>
-						</div>
-					</article>
-
-					<article class="job">
-						<div class="job-accent"></div>
-						<div class="job-body">
-							<div class="job-header">
-								<div>
-									<h3 class="company">Cóndor Aretex SA</h3>
-									<p class="role">IT Programmer &amp; Help Desk</p>
-								</div>
-								<div class="job-meta">
-									<span class="period">Early 2022</span>
-									<span class="location">Arenys de Mar, Spain</span>
-								</div>
-							</div>
-							<ul>
-								<li>Built internal automation tools in Java and maintained legacy systems in COBOL.</li>
-								<li>Provided technical troubleshooting and hardware/software support for company staff.</li>
-							</ul>
-							<div class="tags">
-								<span>Java</span><span>COBOL</span><span>Help Desk</span>
-							</div>
-						</div>
-					</article>
+						</article>
+					))}
 				</div>
 			</div>
 		</section>
@@ -206,51 +106,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<p class="eyebrow">What I work with</p>
 				<h2 class="section-title">Technical Skills</h2>
 				<div class="skills-grid">
-					<div class="skill-group">
-						<div class="skill-icon">⚙️</div>
-						<h4>Backend &amp; APIs</h4>
-						<div class="skill-tags">
-							<span>.NET Core</span><span>C#</span><span>ASP.NET MVC</span><span>ASP.NET Core</span>
-							<span>Microsoft Graph API</span><span>REST</span><span>Swagger / OpenAPI</span>
+					{cv.skills.map((group) => (
+						<div class="skill-group">
+							<div class="skill-icon">{group.icon}</div>
+							<h4>{group.name}</h4>
+							<div class="skill-tags">
+								{group.items.map((s) => <span>{s}</span>)}
+							</div>
 						</div>
-					</div>
-					<div class="skill-group">
-						<div class="skill-icon">🗄️</div>
-						<h4>Databases &amp; ORM</h4>
-						<div class="skill-tags">
-							<span>SQL Server (SSMS)</span><span>MySQL</span><span>Entity Framework</span><span>Data Modeling</span>
-						</div>
-					</div>
-					<div class="skill-group">
-						<div class="skill-icon">🚀</div>
-						<h4>Automation &amp; DevOps</h4>
-						<div class="skill-tags">
-							<span>PowerShell</span><span>GitHub</span><span>CI/CD</span>
-							<span>xUnit</span><span>NUnit</span><span>Moq</span>
-						</div>
-					</div>
-					<div class="skill-group">
-						<div class="skill-icon">☁️</div>
-						<h4>Cloud &amp; Security</h4>
-						<div class="skill-tags">
-							<span>Microsoft 365</span><span>Microsoft Purview</span>
-							<span>Security &amp; Compliance</span><span>Azure (basic)</span>
-						</div>
-					</div>
-					<div class="skill-group">
-						<div class="skill-icon">🤖</div>
-						<h4>AI &amp; LLM Tooling</h4>
-						<div class="skill-tags">
-							<span>LLM API Integration</span><span>MCP (Model Context Protocol)</span><span>Prompt Engineering</span><span>AI-assisted Development</span>
-						</div>
-					</div>
-					<div class="skill-group">
-						<div class="skill-icon">💻</div>
-						<h4>Languages</h4>
-						<div class="skill-tags">
-							<span>C#</span><span>PHP</span><span>Java</span><span>JavaScript</span><span>COBOL</span><span>SQL</span>
-						</div>
-					</div>
+					))}
 				</div>
 			</div>
 		</section>
@@ -261,32 +125,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<p class="eyebrow">Background</p>
 				<h2 class="section-title">Education &amp; Languages</h2>
 				<div class="edu-grid">
-					<div class="edu-card">
-						<div class="edu-year">2020</div>
-						<h3>Desarrollo de Aplicaciones Multiplataforma</h3>
-						<p>Escola Pia, Mataró</p>
-					</div>
-					<div class="edu-card">
-						<div class="edu-year">2014</div>
-						<h3>Sistemas Microinformáticos y Redes</h3>
-						<p>Escola Pia, Mataró</p>
-					</div>
+					{cv.education.map((e) => (
+						<div class="edu-card">
+							<div class="edu-year">{e.year}</div>
+							<h3>{e.degree}</h3>
+							<p>{e.school}</p>
+						</div>
+					))}
 				</div>
 				<div class="languages">
 					<h3>Languages</h3>
 					<div class="lang-list">
-						<div class="lang-item">
-							<span class="lang-name">Catalan</span>
-							<span class="lang-level native">Native</span>
-						</div>
-						<div class="lang-item">
-							<span class="lang-name">Spanish</span>
-							<span class="lang-level native">Native</span>
-						</div>
-						<div class="lang-item">
-							<span class="lang-name">English</span>
-							<span class="lang-level c2">C2 — Cambridge Proficiency</span>
-						</div>
+						{cv.languages.map((l) => (
+							<div class="lang-item">
+								<span class="lang-name">{l.name}</span>
+								<span class={`lang-level ${l.level}`}>{l.label}</span>
+							</div>
+						))}
 					</div>
 				</div>
 			</div>
